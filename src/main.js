@@ -9,9 +9,9 @@ btn.addEventListener("click", () => {
     .then((result) => {
       const { Title, Year, Runtime, Actors, Poster } = result;
       movie.innerHTML = Title;
-      document.querySelector(".year").innerHTML = Year;
-      document.querySelector(".runtime").innerHTML = Runtime;
-      document.querySelector(".actors").innerHTML = Actors;
+      document.querySelector(".year").innerHTML = "Year: " + Year;
+      document.querySelector(".runtime").innerHTML = "Runtime: " + Runtime;
+      document.querySelector(".actors").innerHTML = "Actors: " + Actors;
       document.querySelector("#poster").src = Poster;
     })
     .catch((error) => {
